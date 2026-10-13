@@ -1,0 +1,41 @@
+{
+  "name": "gearnix-backend",
+  "version": "1.0.0",
+  "description": "Gearnix e-commerce backend — Node.js + Express + MySQL (Stored Procedures) + JWT + Razorpay",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "setup:db": "node scripts/setup-db.js",
+    "seed:admin": "node scripts/seed-admin.js",
+    "seed:products": "node scripts/seed-products.js",
+    "seed": "node scripts/seed-admin.js && node scripts/seed-products.js"
+  },
+  "keywords": [
+    "ecommerce",
+    "express",
+    "mysql",
+    "stored-procedures",
+    "jwt",
+    "razorpay"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-validator": "^7.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.11.3",
+    "razorpay": "^2.9.4",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}

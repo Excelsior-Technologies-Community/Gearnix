@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+/* ─── Gearnix brand tokens (matches the reference theme) ───────
+   Dark purple-black background with a fuchsia→pink gradient accent. */
+:root {
+  --brand: #ff2d78;        /* pink   */
+  --brand-2: #b829ff;      /* purple */
+  --bg: #0a0710;           /* page background       */
+  --bg-2: #0f0a18;         /* slightly lighter band */
+  --surface: #15101f;      /* cards                 */
+  --border: #2a1e3d;       /* card borders          */
+  --text: #e7e3ef;
+  --text-dim: #a99fbd;
+}
+
+html, body, #root { min-height: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Gaming display font for headings */
+.font-display {
+  font-family: 'Oxanium', system-ui, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+/* Brand gradient helpers */
+.brand-gradient { background-image: linear-gradient(90deg, var(--brand-2), var(--brand)); }
+.brand-text {
+  background-image: linear-gradient(90deg, var(--brand-2), var(--brand));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.brand-glow { box-shadow: 0 12px 40px -12px rgba(255, 45, 120, 0.55); }
+
+/* Reusable surface + button classes */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+.btn-brand {
+  background-image: linear-gradient(90deg, var(--brand-2), var(--brand));
+  color: #fff;
+  transition: filter 0.2s, box-shadow 0.2s;
+}
+.btn-brand:hover { filter: brightness(1.08); box-shadow: 0 12px 40px -12px rgba(255, 45, 120, 0.55); }
+
+/* Line clamp helper (used on cards) */
+.line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
